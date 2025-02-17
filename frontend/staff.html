@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - AgriEcommerce</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/staff.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Staff Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard-grid">
+            <div class="card">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-value">1,234</span>
+                        <span class="stat-label">Total Buyers</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">567</span>
+                        <span class="stat-label">Total Sellers</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">₹1,23,456</span>
+                        <span class="stat-label">Total Earnings</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">89</span>
+                        <span class="stat-label">Pending Approvals</span>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="overviewChart"></canvas>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <h2>User Management</h2>
+                <div class="user-controls">
+                    <input type="text" id="userSearch" placeholder="Search users...">
+                    <select id="userFilter">
+                        <option value="all">All Users</option>
+                        <option value="buyers">Buyers</option>
+                        <option value="sellers">Sellers</option>
+                        <option value="pending">Pending Approval</option>
+                    </select>
+                </div>
+                <div class="user-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <h2>Market Price Analysis</h2>
+                <div class="analysis-tabs">
+                    <button class="analysis-tab active" data-type="graph">Graph View</button>
+                    <button class="analysis-tab" data-type="table">Table View</button>
+                </div>
+                <div class="analysis-content">
+                    <canvas id="priceChart" class="active"></canvas>
+                    <div id="priceTable" class="hidden">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Current Price</th>
+                                    <th>Change (%)</th>
+                                    <th>Trend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Verification -->
+            <div class="card">
+                <h2>Product Verification</h2>
+                <div class="verification-controls">
+                    <input type="text" id="productSearch" placeholder="Search pending products...">
+                </div>
+                <div class="verification-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Seller</th>
+                                <th>Submitted On</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+              
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <h2>Transaction Monitoring</h2>
+                <div class="transaction-controls">
+                    <input type="text" id="transactionSearch" placeholder="Search transactions...">
+                    <select id="transactionFilter">
+                        <option value="all">All Transactions</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                    </select>
+                </div>
+                <div class="transaction-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Buyer</th>
+                                <th>Seller</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionTable">
+                   
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Payment Management</h2>
+                <div class="payment-controls">
+                    <select id="paymentFilter">
+                        <option value="all">All Payments</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                        <option value="refunded">Refunded</option>
+                    </select>
+                </div>
+                <div class="payment-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                   
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+     
+
+            <div class="card">
+                <h2>Feedback & Reviews</h2>
+                <div class="feedback-controls">
+                    <select id="feedbackFilter">
+                        <option value="all">All Feedback</option>
+                        <option value="buyers">Buyers</option>
+                        <option value="sellers">Sellers</option>
+                    </select>
+                </div>
+                <div class="feedback-list">
+                    <div class="feedback-item">
+                        <div class="feedback-header">
+                            <span class="user">Buyer123</span>
+                            <span class="rating">★★★★☆</span>
+                            <span class="date">2025-02-15</span>
+                        </div>
+                        <p class="feedback-text">Great service, but delivery was slightly delayed.</p>
+                        <div class="feedback-actions">
+                            <button class="action-btn resolve">Mark Resolved</button>
+                            <button class="action-btn reply">Reply</button>
+                        </div>
+                    </div>
+              
+                </div>
+            </div>
+
+    
+            <div class="card">
+                <h2>Marketing & Promotions</h2>
+                <div class="marketing-controls">
+                    <button class="btn" id="sendNotificationBtn">Send Notification</button>
+                    <button class="btn" id="createCampaignBtn">Create Email Campaign</button>
+                </div>
+                <div class="campaign-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Campaign</th>
+                                <th>Sent On</th>
+                                <th>Recipients</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <h2>Product Management</h2>
+                <div class="product-controls">
+                    <button id="addProductBtn" class="btn">Add New Product</button>
+                    <input type="text" id="productSearch" placeholder="Search products...">
+                </div>
+                <div class="product-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">9</span>
+                        <span class="stat-label">Active Products</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">₹15,000</span>
+                        <span class="stat-label">Total Sales</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">85%</span>
+                        <span class="stat-label">Positive Reviews</span>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Stock</th>
+                                <th>Price</th>
+                                <th>Rating</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/staff.js"></script>
+</body>
+</html>

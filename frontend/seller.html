@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <h1>Seller Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buyer.html">Buyer</a></li>
+                <li><a href="seller.html">Seller</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product-upload">
+            <h2>Product Upload</h2>
+            <form id="upload-form">
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <input type="number" id="price" placeholder="Price" required>
+                <input type="number" id="quantity" placeholder="Quantity" required>
+                <input type="file" id="product-image" accept="image/*" required>
+                <button type="submit">Upload Product</button>
+            </form>
+        </section>
+
+        <section id="order-management">
+            <h2>Order Management</h2>
+            <div id="orders">
+                <!-- Orders will be dynamically populated here -->
+            </div>
+        </section>
+
+        <section id="earnings-dashboard">
+            <h2>Earnings Dashboard</h2>
+            <div id="earnings">
+                <!-- Earnings details will be dynamically populated here -->
+            </div>
+        </section>
+
+        <section id="set-pricing">
+            <h2>Set Pricing</h2>
+            <form id="pricing-form">
+                <input type="number" id="new-price" placeholder="New Price" required>
+                <button type="submit">Update Price</button>
+            </form>
+        </section>
+
+        <section id="chat-buyers">
+            <h2>Chat with Buyers</h2>
+            <div id="chat">
+                <!-- Chat interface will be dynamically populated here -->
+            </div>
+        </section>
+
+        <section id="withdrawal-system">
+            <h2>Withdrawal System</h2>
+            <form id="withdrawal-form">
+                <input type="number" id="amount" placeholder="Amount" required>
+                <button type="submit">Withdraw</button>
+            </form>
+        </section>
+
+        <section id="delivery-options">
+            <h2>Delivery Options</h2>
+            <select id="delivery-method">
+                <option value="self">Self-Delivery</option>
+                <option value="third-party">Third-Party Delivery</option>
+            </select>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AgriEcommerce Platform</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+body{
+    background: url('../images/tractorpic\ 4.jpg');
+    background-size:contain;
+}
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(76, 175, 80, 0.1);
+    overflow: hidden;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+
+.chart-container {
+    height: 300px;
+    margin-top: 1.5rem;
+    overflow: auto;
+}
+
+
+#priceChart {
+    width: 100%;
+    height: 300px;
+}
+
+
+.chart-controls {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(76, 175, 80, 0.05);
+    border-radius: 8px;
+}
+
+.control-group {
+    margin-bottom: 1rem;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.control-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.chart-controls button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#addDataPoint {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#addDataPoint:hover {
+    background-color: #45a049;
+}
+
+#resetChart {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#resetChart:hover {
+    background-color: #c0392b;
+}
+
+
+.transaction-list {
+    max-height: 400px;
+    overflow: auto;
+    padding: 0.5rem;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+
+.feedback-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.user {
+    font-weight: 600;
+    color: #3498db;
+}
+
+.rating {
+    color: #f1c40f;
+}
+
+.feedback-text {
+    color: #666;
+    line-height: 1.5;
+}
+
+
+.product-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+
+.stat-item {
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+
+.analysis-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.analysis-tab {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #666;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.analysis-tab.active {
+    color: #4CAF50;
+}
+
+.analysis-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #4CAF50;
+}
+
+
+.transaction-controls,
+.feedback-controls,
+.product-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.action-btn {
+    padding: 0.3rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.action-btn.resolve {
+    background: #4CAF50;
+    color: white;
+}
+
+.action-btn.reply {
+    background: #3498db;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .transaction-controls,
+    .feedback-controls,
+    .product-controls {
+        flex-direction: column;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+}}

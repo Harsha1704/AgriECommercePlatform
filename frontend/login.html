@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AgroBridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/login.css">
+  
+</head>
+
+<body>
+    <div class="language-selector">
+        <select id="language-select">
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+            <option value="te">తెలుగు</option>
+        </select>
+    </div>
+
+<div class="login-container" style="background-image: url('images/agri-bg.jpg'); background-size: cover; background-position: center;">
+    <div class="login-box" style="background: rgba(255, 255, 255, 0.9); border-radius: 15px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px);">
+
+            <h2>Welcome to AgriEcommerce</h2>
+
+            <div class="role-selection">
+                <button class="role-btn" data-role="staff">Agro Staff</button>
+                <button class="role-btn" data-role="buyer">Agro Buyer</button>
+                <button class="role-btn" data-role="seller">Agro Seller</button>
+            </div>
+
+            <!-- Sign In Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" required placeholder="Enter your password">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" style="background: linear-gradient(135deg, #4CAF50, #45a049); color: white; padding: 12px 24px; border-radius: 25px; border: none; cursor: pointer; transition: all 0.3s ease;">
+                    Sign In <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <div class="signup-prompt">
+                    Don't have an account? 
+                    <a href="#" id="show-signup" style="color: #4CAF50; text-decoration: none; font-weight: bold;">
+                        Sign Up
+                    </a>
+                </div>
+            </form>
+
+
+            <form id="signup-form" class="auth-form" style="display: none;">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

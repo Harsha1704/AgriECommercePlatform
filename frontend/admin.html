@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buyer.html">Buyer</a></li>
+                <li><a href="seller.html">Seller</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div id="stats">
+                <div>
+                    <h3>Total Sales</h3>
+                    <p id="total-sales">$0</p>
+                </div>
+                <div>
+                    <h3>Registered Users</h3>
+                    <p id="total-users">0</p>
+                </div>
+                <div>
+                    <h3>Platform Performance</h3>
+                    <p id="performance">Good</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="user-management">
+            <h2>User Management</h2>
+            <div id="users">
+ 
+            </div>
+            <button id="approve-user">Approve</button>
+            <button id="block-user">Block</button>
+        </section>
+
+        <section id="product-listings">
+            <h2>Product Listings</h2>
+            <div id="products">
+           
+            </div>
+            <button id="approve-product">Approve</button>
+            <button id="reject-product">Reject</button>
+        </section>
+
+        <section id="transactions-reports">
+            <h2>Transactions & Reports</h2>
+            <div id="transactions">
+         
+            </div>
+            <button id="generate-report">Generate Report</button>
+        </section>
+
+        <section id="chat-support">
+            <h2>Chat & Support</h2>
+            <div id="chat">
+           
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AgriEcommerce Platform</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
