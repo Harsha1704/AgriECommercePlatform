@@ -3,87 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - AgroBridge</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>AgriEcommerce Platform</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/login.css">
-  
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <style>
+        main {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1; 
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 125, 17, 0.804); 
+    z-index: -1; 
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #f9f9f4; 
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; 
+}
+
+h1 {
+    font-size: 36px;
+    font-family: 'Georgia', serif; 
+    border-bottom: 2px solid #FFD700; 
+    padding-bottom: 10px; 
+}
+
+h2 {
+    font-size: 24px;
+    font-family: 'Georgia', serif; 
+    margin-top: 20px; }
+
+p {
+    font-family: 'Verdana', sans-serif; 
+    font-size: 18px; 
+    margin: 15px 0; 
+    padding: 15px; 
+    border-left: 4px solid #FFD700; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    max-width: 600px; 
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+button {
+    background-color: #FFD700; 
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-weight: bold; 
+}
+
+button:hover {
+    background-color: #FFC107; 
+}
+
+footer {
+    background-color: rgba(0, 0 , 0, 0.7);
+    color: #FFD700; 
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+    </style>
 </head>
-
 <body>
-    <div class="language-selector">
-        <select id="language-select">
-            <option value="en">English</option>
-            <option value="hi">हिंदी</option>
-            <option value="te">తెలుగు</option>
-        </select>
-    </div>
+    <header>
+        <h1>AgroBridge</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buyer.html">Buyer</a></li>
+                <li><a href="seller.html">Seller</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="login-container" style="background-image: url('images/agri-bg.jpg'); background-size: cover; background-position: center;">
-    <div class="login-box" style="background: rgba(255, 255, 255, 0.9); border-radius: 15px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px);">
+    
+   
+    <main>
+        <h1>Why is Agriculture Important?</h1>
+        <section>
+            <h2>Significance of Agriculture</h2>
+            <p>Agriculture is the backbone of human civilization, providing food, raw materials, and employment opportunities worldwide. It plays a crucial role in economic growth and food security, ensuring that populations have access to essential nutrition.</p>
+            <p>Beyond food production, agriculture supports industries such as textiles, pharmaceuticals, and biofuels, making it a cornerstone of global development.</p>
+            <p>Modern agricultural practices have evolved to enhance productivity and sustainability. Techniques like crop rotation, precision farming, and organic farming help conserve resources while maximizing yields. Sustainable agriculture ensures that future generations can continue to rely on the land for sustenance.</p>
+            <p>Agriculture also plays a significant role in environmental conservation by promoting biodiversity and reducing carbon footprints through sustainable practices. Additionally, agritourism and farm-to-table initiatives connect consumers directly with food production, fostering a deeper appreciation for the agricultural industry.</p>
+        </section>
+        <section>
+          <h2>Major Agricultural Products of India</h2>
+          <ul>
+              <li><strong>Rice</strong> - A staple food in India, cultivated extensively in states like West Bengal, Punjab, and Uttar Pradesh.</li>
+              <li><strong>Wheat</strong> - A crucial cereal crop grown mainly in the northern plains, including Punjab, Haryana, and Madhya Pradesh.</li>
+              <li><strong>Tea</strong> - India is one of the largest producers of tea, with Assam and Darjeeling being famous for their high-quality varieties.</li>
+              <li><strong>Spices</strong> - India is known for its diverse range of spices, including cardamom, black pepper, and turmeric, which are essential in global cuisine.</li>
+              <li><strong>Cotton</strong> - A key cash crop that supports the textile industry, cultivated in Maharashtra, Gujarat, and Tamil Nadu.</li>
+          </ul>
+        </section>
+        <section>
+            <h2>How Agriculture Affects Our Lives?</h2>
+            <p>Agriculture impacts every aspect of daily life, from the food we eat to the clothes we wear. It supports livelihoods, drives economic development, and ensures food security for growing populations.</p>
+            <p>By understanding agricultural practices, we can make informed choices about sustainability, food production, and environmental conservation. Supporting local farmers and sustainable farming methods helps build resilient food systems.</p>
+            <p>Agriculture connects us with nature, encourages responsible consumption, and highlights the importance of preserving natural resources for future generations.</p>
+            <button id="learnMoreBtn">Learn More</button>
+            <p id="moreInfo" style="display:none;">Agriculture continues to evolve with technology, improving efficiency and sustainability. Innovations such as vertical farming, hydroponics, and genetic advancements contribute to a more productive and eco-friendly agricultural sector.</p>
+        </section>
+    </main>
 
-            <h2>Welcome to AgriEcommerce</h2>
-
-            <div class="role-selection">
-                <button class="role-btn" data-role="staff">Agro Staff</button>
-                <button class="role-btn" data-role="buyer">Agro Buyer</button>
-                <button class="role-btn" data-role="seller">Agro Seller</button>
-            </div>
-
-            <!-- Sign In Form -->
-            <form id="login-form" class="auth-form">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <div class="input-with-icon">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="email" required placeholder="Enter your email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <div class="input-with-icon">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="password" required placeholder="Enter your password">
-                    </div>
-                </div>
-
-                <button type="submit" class="btn" style="background: linear-gradient(135deg, #4CAF50, #45a049); color: white; padding: 12px 24px; border-radius: 25px; border: none; cursor: pointer; transition: all 0.3s ease;">
-                    Sign In <i class="fas fa-arrow-right"></i>
-                </button>
-
-                <div class="signup-prompt">
-                    Don't have an account? 
-                    <a href="#" id="show-signup" style="color: #4CAF50; text-decoration: none; font-weight: bold;">
-                        Sign Up
-                    </a>
-                </div>
-            </form>
-
-
-            <form id="signup-form" class="auth-form" style="display: none;">
-
-                <div class="form-group">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" required>
-                </div>
-                <div class="form-group">
-                    <label for="signup-email">Email</label>
-                    <input type="email" id="signup-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="signup-password">Password</label>
-                    <input type="password" id="signup-password" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" required>
-                </div>
-                <button type="submit" class="btn">Sign Up</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="js/script.js"></script>
+    <footer>
+        <p>&copy; 2025 AgroBridge. All Rights Reserved.</p>
+    </footer>
+    <script>
+      document.getElementById("learnMoreBtn").addEventListener("click", function() {
+    var moreInfo = document.getElementById("moreInfo");
+    if (moreInfo.style.display === "none") {
+        moreInfo.style.display = "block";
+    } else {
+        moreInfo.style.display = "none";
+    }
+});
+    </script>
 </body>
 </html>
